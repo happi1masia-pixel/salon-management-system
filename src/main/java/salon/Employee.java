@@ -1,28 +1,33 @@
 package main.java.salon;
 
-public class Customer {
+public class Employee {
 
-    private int customerId;
+    private int employeeId;
     private String firstName;
     private String lastName;
+    private String role;
     private String phoneNumber;
 
-    public Customer() {
+    // Default constructor
+    public Employee() {
     }
 
-    public Customer(int customerId, String firstName, String lastName, String phoneNumber) {
-        this.customerId = customerId;
+    // Parameterized constructor
+    public Employee(int employeeId, String firstName, String lastName,
+                    String role, String phoneNumber) {
+        this.employeeId = employeeId;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.role = role;
         this.phoneNumber = phoneNumber;
     }
 
-    public int getCustomerId() {
-        return customerId;
+    public int getEmployeeId() {
+        return employeeId;
     }
 
-    public void setCustomerId(int customerId) {
-        this.customerId = customerId;
+    public void setEmployeeId(int employeeId) {
+        this.employeeId = employeeId;
     }
 
     public String getFirstName() {
@@ -41,6 +46,14 @@ public class Customer {
         this.lastName = lastName;
     }
 
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
     public String getPhoneNumber() {
         return phoneNumber;
     }
@@ -51,10 +64,11 @@ public class Customer {
 
     @Override
     public String toString() {
-        return "Customer{" +
-                "customerId=" + customerId +
+        return "Employee{" +
+                "employeeId=" + employeeId +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
+                ", role='" + role + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 '}';
     }
